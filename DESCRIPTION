@@ -1,0 +1,11 @@
+Package: rsed
+Title: Stream Editing in R
+Version: 0.1.0
+Date: 2016-03-25
+Author: Landon Sego
+Description: Tools for stream editing:  manipulating text files with insertions, replacements, deletions, substitutions, and commenting.
+Suggests:
+    testthat
+Maintainer: Landon Sego <Landon.Sego@pnnl.gov>
+License: file LICENSE
+RoxygenNote: 5.0.1
