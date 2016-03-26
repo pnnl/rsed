@@ -1,0 +1,14 @@
+citHeader("To cite rsed in publications use:")
+
+citEntry(entry = "Manual",
+  title        = "{rsed:  Stream editing in R}",
+  author       = personList(as.person("Landon Sego")),
+  organization = "{Pacific Northwest National Laboratory}",
+  address      = "Richland, WA",
+  year         = "2016",
+  url          = "http://github.com/pnnl/rsed",
+
+  textVersion  =
+  paste("Sego LH. 2016. rsed:  Stream editing in R. Pacific Northwest National Laboratory.",
+        "http://github.com/pnnl/Smisc.")
+)
