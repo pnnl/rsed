@@ -1,5 +1,7 @@
 ##' Converts a character vector to an object of class "stream"
 ##'
+##' Converts a character vector to an object of class "stream" to take advantage of the print method
+##'
 ##' @export
 ##' @param obj The character vector to be converted to a "stream" object
 ##'
