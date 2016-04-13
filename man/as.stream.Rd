@@ -20,7 +20,7 @@ as.stream(obj)
 The same character vector, only it now inherits from class "stream"
 }
 \description{
-Converts a character vector to an object of class "stream"
+Converts a character vector to an object of class "stream" to take advantage of the print method
 }
 \section{Methods (by generic)}{
 \itemize{
