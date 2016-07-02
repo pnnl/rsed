@@ -16,7 +16,8 @@
 
 as.stream <- function(obj) {
     
-  stopifnot(is.character(obj))
+  stopifnotMsg(is.character(obj),
+               "'obj' must be a character vector")
 
   if (!inherits(obj, "stream")) {
     class(obj) <- c("stream", class(obj))

@@ -9,7 +9,7 @@
 ##' from a single line in a file, which can be generated via \code{\link{readLines}}.
 ##'
 ##' @param insertion A character vector that will be inserted into the stream after element \code{after}.
-##' Each element in the vector could correspond to a separate line in the file.
+##' Each element in the vector would correspond to a separate line in the file.
 ##'
 ##' @param after An integer or character string that designates where \code{insertion} is added to \code{stream}.
 ##' If \code{after} is numeric, it designates the line (or element) number in \code{stream} after which the
@@ -59,14 +59,14 @@
 sed_insert <- function(stream, after, insertion, warn = FALSE, ...) {
 
   # Basic checks
-  stopifnot(is.character(stream),
-            is.character(insertion),
-            is.logical(warn),
-            length(warn) == 1)
-
-  # Verify 'after' is atomic and of the correct type
-  if (!((length(after) == 1) & (is.character(after) | is.numeric(after))))
-    stop("'after' must be an integer in [0, length(stream)] or a single character string")
+  stopifnotMsg(is.character(stream),
+               "'stream' must be a character vector",
+               (length(after) == 1) & (is.character(after) | is.numeric(after)),
+               "'after' must be a whole number in [0, length(stream)] or a single character string",
+               is.character(insertion),
+               "'insertion' must be a character vector",
+               is.logical(warn) & (length(warn) == 1),
+               "'warn' must be TRUE or FALSE")
 
   # Get the length of the stream
   ls <- length(stream)
