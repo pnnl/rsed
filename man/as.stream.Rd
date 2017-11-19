@@ -27,6 +27,7 @@ Converts a character vector to an object of class "stream"
 \item \code{print}: Prints an object of class "stream" by removing quotes from the strings and printing each element
 of the character vector on its own line.
 }}
+
 \examples{
 aStream <- c("string1", "string2", "string3")
 aStream
@@ -37,4 +38,3 @@ as.stream(aStream)
 \author{
 Landon Sego
 }
-

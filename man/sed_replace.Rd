@@ -66,11 +66,10 @@ stream
 stream <- sed_replace(stream, "line", "All the same")
 stream
 }
-\author{
-Landon Sego
-}
 \seealso{
 \code{\link{sed_insert}}, \code{\link{sed_substitute}}, \code{\link{sed_comment}}, \code{\link{streamEdit}}
 }
+\author{
+Landon Sego
+}
 \keyword{misc}
-

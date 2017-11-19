@@ -61,11 +61,10 @@ stream
 sed_substitute(stream, " nonsense", "", every = TRUE)
 sed_substitute(stream, " nonsense", "", every = FALSE)
 }
-\author{
-Landon Sego
-}
 \seealso{
 \code{\link{sed_insert}}, \code{\link{sed_replace}}, \code{\link{sed_comment}}, \code{\link{streamEdit}}
 }
+\author{
+Landon Sego
+}
 \keyword{misc}
-

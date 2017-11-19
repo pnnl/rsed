@@ -18,7 +18,7 @@ character string, the insertion is placed after the first element in \code{strea
 where matching is obtained using \code{\link{grep}}.}
 
 \item{insertion}{A character vector that will be inserted into the stream after element \code{after}.
-Each element in the vector could correspond to a separate line in the file.}
+Each element in the vector would correspond to a separate line in the file.}
 
 \item{warn}{If \code{TRUE}, warning messages are produced if insertion fails due to mispecifification
 of \code{after}.}
@@ -61,11 +61,10 @@ stream <- sed_insert(stream,
                     after = "insert another")
 stream
 }
-\author{
-Landon Sego
-}
 \seealso{
 \code{\link{sed_replace}}, \code{\link{sed_substitute}}, \code{\link{sed_comment}}, \code{\link{streamEdit}}
 }
+\author{
+Landon Sego
+}
 \keyword{misc}
-

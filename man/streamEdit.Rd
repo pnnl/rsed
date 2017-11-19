@@ -110,11 +110,10 @@ identical(s, s1)
 # Remove the files
 unlink(c("tmpTest_streamEdit.txt", "tmpTest_streamEdit1.txt"))
 }
-\author{
-Landon Sego
-}
 \seealso{
 \code{\link{sed_insert}}, \code{\link{sed_replace}}, \code{\link{sed_substitute}}, \code{\link{sed_comment}}
 }
+\author{
+Landon Sego
+}
 \keyword{misc}
-

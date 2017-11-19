@@ -5,9 +5,9 @@
 ##' \tabular{ll}{
 ##' Package: \tab rsed\cr
 ##' Type: \tab Package\cr
-##' Version: \tab 0.1.0\cr
-##' Date: \tab 2016-03-25\cr
-##' License: \tab LICENSE\cr
+##' Version: \tab 0.1.1\cr
+##' Date: \tab 2017-11-18\cr
+##' License: \tab  BSD_3_clause + file LICENSE\cr
 ##' }
 ##'
 ##' @name rsed
@@ -16,7 +16,7 @@
 ##'
 ##' @author Landon Sego
 ##'
-##' Maintainer: Landon Sego <Landon.Sego@@pnnl.gov>
+##' Maintainer: Landon Sego <LHS@byu.net>
 ##'
 ##' @keywords package
 ##'
