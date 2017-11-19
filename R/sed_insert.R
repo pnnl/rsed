@@ -59,14 +59,14 @@
 sed_insert <- function(stream, after, insertion, warn = FALSE, ...) {
 
   # Basic checks
-  stopifnotMsg(is.character(stream),
-               "'stream' must be a character vector",
-               (length(after) == 1) & (is.character(after) | is.numeric(after)),
-               "'after' must be a whole number in [0, length(stream)] or a single character string",
-               is.character(insertion),
-               "'insertion' must be a character vector",
-               is.logical(warn) & (length(warn) == 1),
-               "'warn' must be TRUE or FALSE")
+  Smisc::stopifnotMsg(is.character(stream),
+                      "'stream' must be a character vector",
+                      (length(after) == 1) & (is.character(after) | is.numeric(after)),
+                      "'after' must be a whole number in [0, length(stream)] or a single character string",
+                      is.character(insertion),
+                      "'insertion' must be a character vector",
+                      is.logical(warn) & (length(warn) == 1),
+                      "'warn' must be TRUE or FALSE")
 
   # Get the length of the stream
   ls <- length(stream)

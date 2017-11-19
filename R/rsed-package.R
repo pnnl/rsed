@@ -7,10 +7,12 @@
 ##' Type: \tab Package\cr
 ##' Version: \tab 0.1.1\cr
 ##' Date: \tab 2017-11-18\cr
-##' License: \tab  BSD_3_clause + file LICENSE\cr
+##' License: \tab BSD_3_clause + file LICENSE\cr
 ##' }
 ##'
-##' @name rsed
+##' @name rsed-package
+##'
+##' @aliases rsed
 ##'
 ##' @docType package
 ##'

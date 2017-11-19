@@ -4,6 +4,8 @@ Version: 0.1.1
 Date: 2017-11-18
 Authors@R: c(person("Landon", "Sego", role = c("aut", "cre"), email = "LHS@byu.net"))
 Description: Tools for stream editing:  manipulating text files with insertions, replacements, deletions, substitutions, and commenting.
+Imports:
+    Smisc
 Suggests:
     testthat
 License: BSD_3_clause + file LICENSE

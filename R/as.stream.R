@@ -16,8 +16,8 @@
 
 as.stream <- function(obj) {
     
-  stopifnotMsg(is.character(obj),
-               "'obj' must be a character vector")
+  Smisc::stopifnotMsg(is.character(obj),
+                     "'obj' must be a character vector")
 
   if (!inherits(obj, "stream")) {
     class(obj) <- c("stream", class(obj))

@@ -65,18 +65,18 @@
 sed_replace <- function(stream, at, replacement, warn = FALSE, ...) {
 
   # Basic checks
-  stopifnotMsg(is.character(stream),
-               "'stream' must be a character vector",
-               if (is.character(at)) {
-                 length(at) == 1
-               } else is.numeric(at),
-               "'at' must be a character string or a vector of whole numbers",
-               if (!is.null(replacement)) {
-                 is.character(replacement)
-               } else TRUE,
-               "'replacement' must be NULL or a character string",
-               is.logical(warn) & (length(warn) == 1),
-               "'warn' must be TRUE or FALSE")
+  Smisc::stopifnotMsg(is.character(stream),
+                      "'stream' must be a character vector",
+                      if (is.character(at)) {
+                        length(at) == 1
+                      } else is.numeric(at),
+                      "'at' must be a character string or a vector of whole numbers",
+                      if (!is.null(replacement)) {
+                        is.character(replacement)
+                      } else TRUE,
+                      "'replacement' must be NULL or a character string",
+                      is.logical(warn) & (length(warn) == 1),
+                      "'warn' must be TRUE or FALSE")
 
   # If it's character, figure out lines where replacement should take place
   if (is.character(at)) {
