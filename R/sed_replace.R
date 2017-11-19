@@ -65,9 +65,18 @@
 sed_replace <- function(stream, at, replacement, warn = FALSE, ...) {
 
   # Basic checks
-  stopifnot(is.character(stream),
-            is.logical(warn),
-            length(warn) == 1)
+  Smisc::stopifnotMsg(is.character(stream),
+                      "'stream' must be a character vector",
+                      if (is.character(at)) {
+                        length(at) == 1
+                      } else is.numeric(at),
+                      "'at' must be a character string or a vector of whole numbers",
+                      if (!is.null(replacement)) {
+                        is.character(replacement)
+                      } else TRUE,
+                      "'replacement' must be NULL or a character string",
+                      is.logical(warn) & (length(warn) == 1),
+                      "'warn' must be TRUE or FALSE")
 
   # If it's character, figure out lines where replacement should take place
   if (is.character(at)) {
@@ -92,7 +101,7 @@ sed_replace <- function(stream, at, replacement, warn = FALSE, ...) {
   else if (!all(at %in% 1:length(stream))) {
 
     if (warn) {
-      warning("'at' must be an integer in [1, length(stream)] or a single character string. No change were made.")
+      warning("'at' must be an integer in [1, length(stream)] or a single character string. No changes were made.")
     }
 
     return(as.stream(stream))
@@ -104,11 +113,6 @@ sed_replace <- function(stream, at, replacement, warn = FALSE, ...) {
   
   # If a string was provided
   if (!is.null(replacement)) {
-
-    # Verify we have a character string
-    if (!is.character(replacement)) {
-      stop("'replacement' must be 'NULL' or a character string")
-    }
 
     # If the replacement is length 1, then insert directly
     if (length(replacement) == 1) {

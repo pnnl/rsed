@@ -14,7 +14,7 @@ from a single line in a file, which can be generated via \code{\link{readLines}}
 \item{pattern}{A character string containing the regular expression that will be used to identify
 which the elements (or lines) in \code{stream} that will be substituted using \code{sed_substitute}.}
 
-\item{replacement}{A character string of length 1 (vectors not supported), that will be substituted
+\item{replacement}{A character string (vectors not supported), that will be substituted
 for the \code{pattern}.  Setting \code{replacement = ""} will remove the characters matched
 to \code{pattern}.}
 
@@ -61,11 +61,10 @@ stream
 sed_substitute(stream, " nonsense", "", every = TRUE)
 sed_substitute(stream, " nonsense", "", every = FALSE)
 }
-\author{
-Landon Sego
-}
 \seealso{
 \code{\link{sed_insert}}, \code{\link{sed_replace}}, \code{\link{sed_comment}}, \code{\link{streamEdit}}
 }
+\author{
+Landon Sego
+}
 \keyword{misc}
-

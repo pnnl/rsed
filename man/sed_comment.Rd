@@ -104,11 +104,10 @@ b
 # Remove the Java comments from the second and fourth lines
 sed_comment(b, c(2, 4), add = FALSE, type = "Java")
 }
-\author{
-Landon Sego
-}
 \seealso{
 \code{\link{sed_insert}}, \code{\link{sed_replace}}, \code{\link{sed_substitute}}, \code{\link{streamEdit}}
 }
+\author{
+Landon Sego
+}
 \keyword{misc}
-

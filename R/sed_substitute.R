@@ -7,7 +7,7 @@
 ##' @param pattern A character string containing the regular expression that will be used to identify
 ##' which the elements (or lines) in \code{stream} that will be substituted using \code{sed_substitute}.
 ##'
-##' @param replacement A character string of length 1 (vectors not supported), that will be substituted
+##' @param replacement A character string (vectors not supported), that will be substituted
 ##' for the \code{pattern}.  Setting \code{replacement = ""} will remove the characters matched
 ##' to \code{pattern}.
 ##'
@@ -59,15 +59,16 @@
 sed_substitute <- function(stream, pattern, replacement, every = TRUE, warn = FALSE, ...) {
 
   # Basic checks
-  stopifnot(is.character(stream),
-            is.character(pattern),
-            length(pattern) == 1,
-            is.character(replacement),
-            length(replacement) == 1,
-            is.logical(every),
-            length(every) == 1,
-            is.logical(warn),
-            length(warn) == 1)
+  Smisc::stopifnotMsg(is.character(stream),
+                      "'stream' must be a character vector",  
+                      is.character(pattern) & (length(pattern) == 1),
+                      "'pattern' must be a character string",
+                      is.character(replacement) & (length(replacement) == 1),
+                      "'replacement' must be a character string",
+                      is.logical(every) & (length(every) == 1),
+                      "'every' must be TRUE or FALSE",
+                      is.logical(warn) & (length(warn) == 1),
+                      "'warn' must be TRUE or FALSE")
 
   # If the pattern isn't present
   if (!any(grepl(pattern, stream, ...))) {

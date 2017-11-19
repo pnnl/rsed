@@ -103,12 +103,18 @@ sed_comment <- function(stream, at, add = TRUE,
                         warn = FALSE, ...) {
 
   # Basic checks
-  stopifnot(is.character(stream),
-            is.logical(add),
-            length(add) == 1,
-            is.character(type),
-            is.logical(warn),
-            length(warn) == 1)
+  Smisc::stopifnotMsg(is.character(stream),
+                      "'stream' must be a character vector",
+                      if (is.character(at)) {
+                        length(at) == 1
+                      } else is.numeric(at),
+                      "'at' must be a character string or a vector of whole numbers",
+                      is.logical(add) & (length(add) == 1),
+                      "'add' must be TRUE or FALSE",
+                      is.character(type),
+                      "'type' must be one of 'R', 'C', 'Java', 'html', 'tex', or 'SAS' or a customized 2-vector of comment characters",
+                      is.logical(warn) & (length(warn) == 1),
+                      "'warn' must be TRUE or FALSE")
 
   # If it's character, figure out lines where commenting should take place
   if (is.character(at)) {
