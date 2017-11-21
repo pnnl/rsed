@@ -6,14 +6,14 @@
 \alias{rsed}
 \title{rsed}
 \description{
-rsed:  Stream editing in R. Tools for manipulating text files with insertions, replacements, deletions, substitutions, and comments.
+rsed:  Stream editing. Tools for manipulating text files with insertions, replacements, deletions, substitutions, and comments.
 }
 \details{
 \tabular{ll}{
 Package: \tab rsed\cr
 Type: \tab Package\cr
-Version: \tab 0.1.1\cr
-Date: \tab 2017-11-18\cr
+Version: \tab 0.1.2\cr
+Date: \tab 2017-11-20\cr
 License: \tab BSD_3_clause + file LICENSE\cr
 }
 }

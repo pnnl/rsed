@@ -1,4 +1,4 @@
-## rsed: Stream editing in R
+## rsed: Stream editing
 
 An R package with tools for stream editing: manipulating text files with insertions, replacements, deletions, substitutions, and comments.  You can find package vignettes and documentation [here](https://pnnl.github.io/rsed).
 
@@ -8,7 +8,7 @@ An R package with tools for stream editing: manipulating text files with inserti
 
 #### To install:
 
-You can install the package from [CRAN](https://cran.r-project.org/) or from [GitHub](https://github.com):
+You can install the package from [CRAN](https://CRAN.R-project.org/) or from [GitHub](https://github.com):
 
 ##### CRAN
 
