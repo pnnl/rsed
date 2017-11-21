@@ -1,8 +1,9 @@
 Package: rsed
-Title: Stream Editing in R
-Version: 0.1.1
-Date: 2017-11-18
+Title: Stream Editing
+Version: 0.1.2
+Date: 2017-11-20
 Authors@R: c(person("Landon", "Sego", role = c("aut", "cre"), email = "LHS@byu.net"))
+URL: https://pnnl.github.io/rsed
 Description: Tools for stream editing:  manipulating text files with insertions, replacements, deletions, substitutions, and commenting.
 Imports:
     Smisc
